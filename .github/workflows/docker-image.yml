@@ -22,4 +22,4 @@ jobs:
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
-        image: javulna.jar
+        image: javulna:$(date +%s)
