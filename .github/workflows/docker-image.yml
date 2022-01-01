@@ -18,7 +18,7 @@ jobs:
       run: docker build . --file Dockerfile --tag javulna:$(date +%s)
       
     - uses: snyk/actions/docker@master
-    - name: Scan the Image
+      name: Scan the Image
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
