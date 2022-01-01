@@ -16,3 +16,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag javulna:$(date +%s)
+      
+    - uses: snyk/actions/docker@master
+    - name: Scan the Image
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        image: javulna.jar
