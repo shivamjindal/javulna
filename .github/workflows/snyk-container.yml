@@ -1,4 +1,4 @@
-name: Snyk Container 2
+name: Snyk Container
 on: push
 jobs:
   snyk:
