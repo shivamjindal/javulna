@@ -1,4 +1,4 @@
-name: Snyk Maven
+name: Snyk Open Source
 on: push
 jobs:
   security:
